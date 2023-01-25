@@ -1,0 +1,67 @@
+---
+import '../style.css';
+import ButtonLink from '../components/ButtonLink.astro';
+const buttons = [
+	{
+		href: 'https://www.linkedin.com/in/leonardosalvucci/',
+		title: 'LinkedIn',
+		leftIcon: 'linkedin.svg',
+	},
+	{
+		href: 'https://twitter.com/LeSalvucci',
+		title: 'Twitter',
+		leftIcon: 'twitter.svg',
+	},
+	{
+		href: 'https://github.com/LeonardoSalvucci',
+		title: 'GitHub',
+		leftIcon: 'github.svg',
+	},
+	{
+		href: 'https://dev.to/lesalvucci',
+		title: 'Dev.to',
+		leftIcon: 'devto.svg',
+	},
+	{
+		href: 'https://mine-sweeper.lesalvucci.xyz',
+		title: 'Mine Sweeper Game',
+		leftIcon: 'bomb.svg',
+	},
+	{
+		href: 'https://big-bang-theory.lesalvucci.xyz',
+		title: 'Big Bang Theory Cast',
+		leftIcon: 'atom.svg',
+	},
+	{
+		href: 'https://react-todo.lesalvucci.xyz',
+		title: 'Yes, another todo app',
+		leftIcon: 'todo.svg',
+	},
+
+]
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>lesalvuci.xyz</title>
+	</head>
+	<body>
+		<div class="container m-auto p-5 flex flex-col gap-28 pt-36">
+			<section class="flex flex-grow flex-col justify-center items-center gap-5">
+				<img src="/img/lesalvucci.webp" class="object-cover w-48 h-48 object-top rounded-full" />
+				<h2 class="text-center text-white text-2xl">@LeSalvucci</h2>
+			</section>
+			<section class="flex flex-col flex-grow justify-center items-center gap-5">
+				{
+					buttons.map((button) => {
+						return <ButtonLink {...button} />
+					})
+				}
+			</section>
+		</div>
+	</body>
+</html>

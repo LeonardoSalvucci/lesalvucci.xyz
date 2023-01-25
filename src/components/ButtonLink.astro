@@ -1,0 +1,15 @@
+---
+const { href, title, leftIcon } = Astro.props
+---
+<a 
+  href={href} 
+  target="_blank"
+  class="bg-slate-700 text-white flex flex-grow justify-between items-center max-w-md w-full rounded-lg px-5 py-1">
+  <i class="material-icons text-2xl p-2">
+    <img src={`/img/${leftIcon}`} alt={`Go to ${title}`} class="w-9 h-9" />
+  </i>
+  <span class="text-xl">{title}</span>
+  <i class="material-icons text-2xl p-2">
+    <img src="/img/goto.svg" alt={`Go to ${title}`} class="w-9 h-9" />
+  </i>
+</a>
